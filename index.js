@@ -1,4 +1,4 @@
- function message(req){
+ function i18n(req){
   const headers = (req.headers["accept-language"]).toString()
   try{
     let language = require(`../../languages/${headers}.json`)
@@ -10,5 +10,5 @@
 }
 
 module.exports = { 
-  i18n: message
+  message: i18n
 }
