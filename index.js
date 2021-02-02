@@ -1,7 +1,14 @@
-function hello(){
-  console.log('hello')
+const i18n = (req) => {
+  const headers = req.headers["accept-language"]
+  try{
+    let language = require(`./languages/${headers}.json`)
+    return language
+  }catch(e){
+    let language = require(`./languages/pt-br.json`)
+    return language
+  }
 }
 
 module.exports = { 
-  hello: hello()
-  }
+  i18n: i18n()
+}
