@@ -1,5 +1,5 @@
 const i18n = (req) => {
-  const headers = req.headers["accept-language"]
+  const headers = (req.headers["accept-language"]).toString()
   try{
     let language = require(`./languages/${headers}.json`)
     return language
