@@ -1,8 +1,7 @@
  function getHeadersLanguages(headers){
     let lang = headers.split(",");
-    console.log('test',lang)
-    lang = lang.split(";")
-    console.log('test',lang)
+    lang = lang.map(lang.split(';')[0])
+    console.log(lang)
  }
  
  function i18n(req){
