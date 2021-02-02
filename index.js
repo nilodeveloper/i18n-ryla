@@ -17,7 +17,6 @@ const fs = require('fs');
         languages.push(language.split(";")[0])
       }
     })
-    console.log("languages", languages)
 
     for(let i=0;i<languages.length;i++){
       if(names.includes(languages[i])){
@@ -29,12 +28,10 @@ const fs = require('fs');
  function i18n(req){
   try{
     const headers = getHeadersLanguages(req.headers["accept-language"])
-    console.log('headers', headers)
     let language = require(`../../languages/${headers}.json`)
     return language
   }catch(e){
     let default_language = config.default
-    console.log(default_language)
     let language = require(`../../languages/${default_language}.json`)
     return language
   }
