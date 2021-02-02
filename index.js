@@ -4,6 +4,7 @@
     .toString()
     .toLowerCase()
     .replace(/["]/g, "");
+    console.log(headers)
     let language = require(`../../languages/${headers}.json`)
     return language
   }catch(e){
