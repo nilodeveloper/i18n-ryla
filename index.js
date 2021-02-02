@@ -1,4 +1,5 @@
-const i18n = (req) => {
+ function i18n(req){
+   console.log(req)
   const headers = (req.headers["accept-language"]).toString()
   try{
     let language = require(`./languages/${headers}.json`)
@@ -10,5 +11,5 @@ const i18n = (req) => {
 }
 
 module.exports = { 
-  i18n: i18n()
+  i18n: i18n(req)
 }
