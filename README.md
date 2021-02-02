@@ -1,1 +1,2 @@
-# i18n-simple
+# super-i18n
+This project is a test...
