@@ -3,5 +3,5 @@ function hello(){
 }
 
 module.exports = { 
-  hello: linguagens
+  hello: hello()
   }
