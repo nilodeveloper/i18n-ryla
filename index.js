@@ -11,5 +11,5 @@
 }
 
 module.exports = { 
-  i18n: i18n(req)
+  i18n: i18n
 }
