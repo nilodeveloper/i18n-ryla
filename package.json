@@ -1,6 +1,6 @@
 {
   "name": "i18n-ryla",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "i18n for express projects",
   "main": "index.js",
   "scripts": {

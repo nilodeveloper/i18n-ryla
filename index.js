@@ -1,5 +1,5 @@
  function i18n(req){
-  const headers = (req.headers["accept-language"]).toString()
+  const headers = (req.headers["accept-language"]).toString().toLowerCase()
   try{
     let language = require(`../../languages/${headers}.json`)
     return language
