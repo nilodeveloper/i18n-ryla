@@ -10,4 +10,4 @@ function i18n(req){
     }
 }
 
-export { foo, bar };
+export { i18n };
