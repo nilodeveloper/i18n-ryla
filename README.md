@@ -1,5 +1,5 @@
 # i18n-ryla
-Used for internationalization of api's based on the ``Accept-Language`` of the headers.
+Used for internationalization of ``ExpressJS api's`` based on the ``Accept-Language`` of the headers.
 
 # How to install
 ```
@@ -23,7 +23,8 @@ An example of a json localization file would be:
 {
     "hello_world": "Hello World!"
 }
-
+```
+```
 // pt-br.json
 {
     "hello_world": "Olá Mundo!"
