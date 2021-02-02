@@ -1,5 +1,6 @@
 const DEFAULT_LANGUAGE = 'pt-br'
-function i18n(req){
+
+function i18n (req){
     const headers = req.headers["accept-language"].toLowerCase()
     try{
         let language = require(path.resolve(__dirname, `./languages/${headers}.json`))
@@ -9,5 +10,3 @@ function i18n(req){
         return language
     }
 }
-
-export { i18n };
