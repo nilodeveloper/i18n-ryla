@@ -5,12 +5,14 @@ Used for internationalization of ``ExpressJS api's`` based on the ``Accept-Langu
 ```
 npm install i18n-ryla
 ```
-Create a languages folder with localization json files
+Create a languages folder with localization json files and config.json
 
 ```
 -node-modules
 -server.js
 -languages
+    |
+    ---> config.json
     |
     ---> en-us.json
     |
@@ -28,6 +30,15 @@ An example of a json localization file would be:
 // pt-br.json
 {
     "hello_world": "Olá Mundo!"
+}
+```
+
+config.json is required to have at least the default language
+
+```
+// config.json
+{
+    "default": "en-us" // or pt-pt, pt-br... just make sure you have the corresponding json file
 }
 ```
 

@@ -1,4 +1,5 @@
-const testFolder = './languages';
+const languageFolder = './languages';
+const config = require('../../languages/config.json');
 const fs = require('fs');
 
  function getHeadersLanguages(headers){
@@ -6,7 +7,7 @@ const fs = require('fs');
     let languages = []
     let names = []
     
-    fs.readdirSync(testFolder).forEach(file => {
+    fs.readdirSync(languageFolder).forEach(file => {
       names.push(file.split(".")[0])
     });
 
@@ -32,7 +33,9 @@ const fs = require('fs');
     let language = require(`../../languages/${headers}.json`)
     return language
   }catch(e){
-    let language = require(`../../languages/pt-br.json`)
+    let default_language = config.default
+    console.log(default_language)
+    let language = require(`../../languages/${default_language}.json`)
     return language
   }
 }
