@@ -1,10 +1,10 @@
  function i18n(req){
   const headers = (req.headers["accept-language"]).toString()
   try{
-    let language = require(`../languages/${headers}.json`)
+    let language = require(`../../languages/${headers}.json`)
     return language
   }catch(e){
-    let language = require(`../languages/pt-br.json`)
+    let language = require(`../../languages/pt-br.json`)
     return language
   }
 }
