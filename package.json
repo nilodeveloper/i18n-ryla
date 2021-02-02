@@ -1,0 +1,20 @@
+{
+  "name": "i18n-ryla",
+  "version": "1.0.0",
+  "description": "i18n for express projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nilodeveloper/i18n-simple.git"
+  },
+  "author": "Nilo Almeida",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nilodeveloper/i18n-simple/issues"
+  },
+  "homepage": "https://github.com/nilodeveloper/i18n-simple#readme",
+  "dependencies": {}
+}
