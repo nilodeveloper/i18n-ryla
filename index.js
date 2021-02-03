@@ -25,15 +25,17 @@ const fs = require('fs');
     }
  }
  
- function i18n(req){
+ function i18n(req, res, next){
   try{
     const headers = getHeadersLanguages(req.headers["accept-language"])
     let language = require(`../../languages/${headers}.json`)
-    return language
+    req.language = language
+    next()
   }catch(e){
     let default_language = config.default
     let language = require(`../../languages/${default_language}.json`)
-    return language
+    req.language = language
+    next()
   }
 }
 

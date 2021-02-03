@@ -47,7 +47,9 @@ When you need a multilingual message, import i18n:
 ```
 const i18n = require('i18n-ryla')
 
+app.use(i18n.message)
+
 app.get('/', (req, res)=>{
-    i18n.message(req).hello_world
+    res.send(req.language.hello_world)
 })
 ```
