@@ -42,6 +42,18 @@ config.json is required to have at least the default language
 }
 ```
 
+In config.json we can also choose if we want to return a similar language if no language on the system is the same as that of the user. Put ``resemblance = true`` in config.json 
+
+Example: user has only the pt-pt language and the system only pt-br and the default is en-us. In this case with the true resemblance the system returns en-us instead of en-us.
+
+```
+// config.json
+{
+    "default": "en-us", // or pt-pt, pt-br... just make sure you have the corresponding json file
+    "resemblance": true // optional
+}
+```
+
 When you need a multilingual message, import i18n:
 
 ```
